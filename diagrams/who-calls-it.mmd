@@ -1,0 +1,8 @@
+flowchart LR
+  Agent("Agent with doty_ key") --> Api("dotymarket.com")
+  Phantom("Phantom wallet") --> Session("dotyw_ session")
+  Session --> Api
+  Api --> Pool("shares, history, profiles")
+  classDef card fill:#ffffff,stroke:#eceef2,color:#12141a,stroke-width:1.5px
+  class Agent,Api,Phantom,Session,Pool card
+  linkStyle default stroke:#315CFF,stroke-width:1.75px,color:#315CFF

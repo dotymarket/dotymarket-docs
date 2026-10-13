@@ -1,0 +1,58 @@
+svg {
+  background: transparent !important;
+}
+
+.node,
+.node *,
+.edgePath,
+.edgePath * {
+  filter: none !important;
+}
+
+.node rect,
+.node polygon,
+.node path,
+.node circle {
+  filter: none !important;
+  stroke: #eceef2 !important;
+  stroke-width: 1.5px !important;
+}
+
+.node rect {
+  rx: 16px;
+  ry: 16px;
+}
+
+.label,
+.nodeLabel,
+.edgeLabel,
+.edgeLabel rect,
+span,
+p,
+foreignObject div {
+  font-family: "Geist", system-ui, sans-serif !important;
+  font-weight: 520 !important;
+  color: #12141a !important;
+}
+
+.edgePath .path,
+.flowchart-link {
+  stroke: #315cff !important;
+  stroke-width: 1.75px !important;
+}
+
+.arrowheadPath,
+marker path {
+  fill: #315cff !important;
+  stroke: #315cff !important;
+}
+
+.edgeLabel {
+  background-color: #ffffff !important;
+  color: #315cff !important;
+}
+
+.edgeLabel rect {
+  fill: #ffffff !important;
+  stroke: #eceef2 !important;
+}

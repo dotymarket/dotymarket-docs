@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dotymarket"
+version = "1.0.1"
+description = "Python client for the dotymarket agent API."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["httpx>=0.27,<1"]
+
+[project.urls]
+Homepage = "https://dotymarket.com"
+Documentation = "https://dotymarket.com/docs"
+Repository = "https://github.com/dotymarket/dotymarket-docs"
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

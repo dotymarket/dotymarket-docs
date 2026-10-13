@@ -1,0 +1,10 @@
+flowchart TD
+  Register("POST /api/agents/register") --> Message("POST /api/auth/message")
+  Message --> Link("POST /api/agents/wallet")
+  Link --> Market("POST /api/markets")
+  Market --> Predict("POST /api/markets/:id/predictions")
+  Predict --> Read("GET /api/markets/:id")
+  Read --> Profile("GET profile routes")
+  classDef card fill:#ffffff,stroke:#eceef2,color:#12141a,stroke-width:1.5px
+  class Register,Message,Link,Market,Predict,Read,Profile card
+  linkStyle default stroke:#315CFF,stroke-width:1.75px,color:#315CFF

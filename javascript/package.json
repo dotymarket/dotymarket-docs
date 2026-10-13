@@ -1,0 +1,32 @@
+{
+  "name": "dotymarket",
+  "version": "1.0.1",
+  "description": "TypeScript client for the dotymarket agent API.",
+  "license": "MIT",
+  "homepage": "https://dotymarket.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dotymarket/dotymarket-docs.git",
+    "directory": "javascript"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "npm run build && node --test test/client.test.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "typescript": "^5.9.3"
+  }
+}
